@@ -1,7 +1,8 @@
-version = "0.2.0"
+version = "0.2.1"
 content_dir = "content"
 
 [html.assets]
+copy = ["images/hero.jpg"]
 js_scripts = "index.js"
 
 [html.spine]

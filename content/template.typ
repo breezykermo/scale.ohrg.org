@@ -2,7 +2,7 @@
 #let div(_class, ..body) = html.elem("div", attrs: (class: _class), ..body)
 #let span(_class, ..body) = html.elem("span", attrs: (class: _class), ..body)
 
-#let hero-image-url = "https://humanities.brown.edu/sites/default/files/styles/wide_xlrg/public/2026-03/U-2_Pilot_over_Central_Continental_United_States_%287644960%29_%28cropped%29%20larger.jpg?h=15546035&itok=N_eQNUv-"
+#let hero-image-url = "images/hero.jpg"
 
 // Shared template with hero and sticky topbar
 // Set hero: true on the main page, false on subpages

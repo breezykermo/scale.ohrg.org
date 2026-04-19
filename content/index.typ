@@ -1,4 +1,4 @@
-#import "template.typ": template, div, span
+#import "template.typ": div, span, template
 
 // Schedule data
 #let friday-sessions = (
@@ -40,7 +40,7 @@
     discussant: "Niall Chithelen",
     abstract: [In studying the emergence of a field of nature study in early modern Japan, historians face four key challenges: first, accurately reconstructing the meanings and uses of scholars' conceptual frameworks that mediated the entire enterprise of natural knowledge in the Tokugawa period; second, faithfully reconstructing how these scholars justified the authority of their cognitive claims on plants, animals, and ecosystems at the institutional, sociological, and epistemological levels; third, justifying these reconstructions historiographically despite the scarcity of documentary sources explaining and philosophically justifying Tokugawa naturalists' cognitive practices; and fourth, reflecting on how historians' own modern conceptual frameworks influence their reconstructions. These four challenges relate, respectively, to conceptual history, historical epistemology, historiography, and epistemology.
 
-"Scale" plays a role in knowledge formation both in the context of the historical practices that historians aim to reconstruct and at the self-reflective level of their own cognitive claims. This paper explores how the idea of "scale" functions semiotically to create distance from the objects of study, making their manipulation possible.],
+      "Scale" plays a role in knowledge formation both in the context of the historical practices that historians aim to reconstruct and at the self-reflective level of their own cognitive claims. This paper explores how the idea of "scale" functions semiotically to create distance from the objects of study, making their manipulation possible.],
     bio: none,
   ),
   (time: "3:00 pm – 3:15 pm", type: "break", label: "Break"),
@@ -144,21 +144,11 @@
 
 #context if target() == "html" {
   div("intro")[
-    This workshop will consider recent developments in digital culture at different scales, from the psyche and the person to nation-states and the globe. Are these changes a function of new technologies, existing corporate powers, independent user-driven communities, or larger polities? Does AI change the scale of "Big" Tech? Do developments in AI specifically reflect or transform existing divisions, especially geopolitical ones? What do we gain or lose by approaching digital communities through frames such as U.S.--China competition or global community?
+    This workshop considered recent developments in digital culture at different scales, from the psyche and the person to nation-states and the globe. Are these changes a function of new technologies, existing corporate powers, independent user-driven communities, or larger polities? Does AI change the scale of "Big" Tech? Do developments in AI specifically reflect or transform existing divisions, especially geopolitical ones? What do we gain or lose by approaching digital communities through frames such as U.S.--China competition or global community?
 
-    An interdisciplinary group of media studies scholars, computer scientists, anthropologists, and open-source software professionals will address these questions and what, if anything, is unprecedented about the digital landscape today.
-
-    #html.elem("p", attrs: (class: "contact-info"))[
-      Free and open to the public. For questions or to request special services, accommodations, or assistance, please contact #link("mailto:humanities-institute@brown.edu")[humanities-institute\@brown.edu] or (401) 863-6070.
-    ]
+    An interdisciplinary group of media studies scholars, computer scientists, anthropologists, and open-source software professionals addressed these questions and what, if anything, is unprecedented about the digital landscape today.
   ]
-} else [
-  This workshop will consider recent developments in digital culture at different scales, from the psyche and the person to nation-states and the globe. Are these changes a function of new technologies, existing corporate powers, independent user-driven communities, or larger polities? Does AI change the scale of "Big" Tech? Do developments in AI specifically reflect or transform existing divisions, especially geopolitical ones? What do we gain or lose by approaching digital communities through frames such as U.S.--China competition or global community?
-
-  An interdisciplinary group of media studies scholars, computer scientists, anthropologists, and open-source software professionals will address these questions and what, if anything, is unprecedented about the digital landscape today.
-
-  _Free and open to the public. For questions or to request special services, accommodations, or assistance, please contact #link("mailto:humanities-institute@brown.edu")[humanities-institute\@brown.edu] or (401) 863-6070._
-]
+}
 
 #context if target() == "html" {
   div("schedule-section")[
@@ -184,9 +174,9 @@
 } else {
   [== Schedule
 
-  _White Family Salon (room 110), Andrews House, 13 Brown Street._
+    _White Family Salon (room 110), Andrews House, 13 Brown Street._
 
-  === Friday, April 17]
+    === Friday, April 17]
 
   for session in friday-sessions {
     if session.type == "talk" {
