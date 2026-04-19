@@ -1,0 +1,17 @@
+version = "0.2.0"
+content_dir = "content"
+
+[html.assets]
+js_scripts = "index.js"
+
+[html.spine]
+vertebrae = ["index.typ", "opening.typ", "closing.typ"]
+
+[pdf.spine]
+title = "[SCALE]: Software, Community, Territory"
+vertebrae = ["index.typ"]
+merge = true
+
+[epub.spine]
+title = "[SCALE]: Software, Community, Territory"
+vertebrae = ["index.typ"]

@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* ============================================
+   CSS Variables
+   ============================================ */
+:root {
+  --text-color: #1a1a1a;
+  --text-muted: #555;
+  --border-color: #e0e0e0;
+  --bg-light: #f7f7f7;
+  --topbar-height: 56px;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+/* ============================================
+   Reset & Base (Mobile-first)
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: #fff;
+}
+
+/* Rheo inserts a default header — hide it */
+.header {
+  display: none;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 1rem;
+}
+
+.hero-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+
+.hero-location {
+  font-size: 0.9rem;
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* ============================================
+   Sticky Topbar
+   ============================================ */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--topbar-height);
+  background-size: cover;
+  background-position: center 30%;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.topbar.visible {
+  transform: translateY(0);
+}
+
+.topbar-link {
+  text-decoration: none;
+}
+
+.topbar-link:hover {
+  opacity: 1;
+}
+
+.topbar-title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+/* On subpages (no hero), add top padding so content isn't hidden behind fixed topbar */
+body:not(:has(.hero)) .main-content {
+  padding-top: calc(var(--topbar-height) + 2rem);
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+.main-content {
+  position: relative;
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro p {
+  margin: 0 0 1rem 0;
+}
+
+.contact-info {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   Schedule
+   ============================================ */
+.schedule-section h2 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2.5rem 0 0.5rem 0;
+  color: var(--text-muted);
+}
+
+.schedule-location {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem 0;
+}
+
+.day-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2rem 0 0.5rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.schedule-row {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-time {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+}
+
+.schedule-speaker {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+}
+
+.schedule-talk-title {
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.schedule-discussant {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.schedule-abstract {
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.schedule-bio {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--border-color);
+  padding-left: 1rem;
+  margin: 0.75rem 0 0 0;
+  line-height: 1.55;
+}
+
+.schedule-row.break-row {
+  background: var(--bg-light);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+}
+
+.schedule-row.break-row .schedule-content {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.roundtable-chair {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ============================================
+   Tablet+ (min-width: 600px)
+   ============================================ */
+@media (min-width: 600px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-location {
+    font-size: 1rem;
+  }
+
+  .main-content {
+    padding: 3rem 2rem;
+  }
+
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+  }
+
+  .schedule-row.break-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+  }
+
+  .schedule-time {
+    margin-bottom: 0;
+    padding-top: 0.15rem;
+  }
+}
+
+/* ============================================
+   Desktop (min-width: 900px)
+   ============================================ */
+@media (min-width: 900px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .topbar-title {
+    font-size: 1.1rem;
+  }
+
+  .schedule-row {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .schedule-row.break-row {
+    grid-template-columns: 160px 1fr;
+  }
+}
