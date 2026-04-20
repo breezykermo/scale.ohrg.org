@@ -27,13 +27,13 @@ This year, we turn to ideas relating our lab's middle term, _Scale_, through the
 'Artificial Intelligence' has always been a confusing formulation.
 Though it was John McCarthy who is credited with coining the term, the phrase and field that emerged from it tracks back, of course, to Alan Turing's imitation game, which we now refer to as the Turing test.
 The Turing test was devised as an experimental framing for how we (humans) could plumb the depths of the distinction between computers and humans, humans and machines.
-It is now also a primal scene which organizes computing's historical development, the cradle of the Computer Science's incessant drive towards the production of computational sentience.
+It is now also a primal scene which organizes computing's historical development, the cradle of Computer Science's incessant drive towards the production of computational sentience.
 The Turing test is _also_ the most recent origin of the myth that a credible acrobatics in the manipulation of language in specific conditions of its communication amounts to a robust philosophical definition of the hazardous notion that steers this computing research: intelligence.
 Turing is only the 'most recent' origin of this idea, for it really reaches back to at least Descartes in the seventeenth century.
 
 One of the ongoing projects in this lab is to clarify whether there deserves to be a hard distinction between computing research in general---or A.I. research in particular---and the humanities.
 As has been the case in efforts that probe the boundaries of the universe, of nature, and of the psyche in centuries past, the most scientific kind of inquiry shouldn't be hamstrung by artificial separations between disciplines or forms of knowledge.
-A.I. research has arguably had a polymathic nature since its inception in the mid-twentieth century, and we would do a disservice to ourselves by over-specializing it now.
+A.I. research has had a polymathic nature since its inception in the mid-twentieth century, and we would do a disservice to ourselves by over-specializing it now.
 This is especially true as A.I. seems to be the only place where capital still somehow sloshes over to support genuinely academic ends, rather than servicing profit or the nation-state as a means in its mimetic application in industry.
 That is, academic inquiry that is not rendered an effective handmaiden in capitalist or colonial conceptions of progress.
 
